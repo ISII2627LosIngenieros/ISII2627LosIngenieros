@@ -5,10 +5,10 @@ namespace AppForSEII.API.Models;
 
 public class ClaseInscrita
 {
-    public ClaseDeportiva ClaseDeportiva { get; set; }  
+    //public ClaseDeportiva ClaseDeportiva { get; set; }  
     public Int32 ClaseDeportivaId { get; set; }  
     public Int32 Id { get; set; }  //Primary key de la tabla ClaseInscrita
-    public Inscripcion Inscripcion { get; set; }
+    //public Inscripcion Inscripcion { get; set; }
     public Int32 InscripcionId { get; set; }  //Foreign key de la relación con la clase Inscripcion
     public String? Observaciones { get; set; }
     public Int32 PlazasReservadas { get; set; }
