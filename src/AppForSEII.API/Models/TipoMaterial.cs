@@ -15,6 +15,7 @@ public class TipoMaterial
     }
 
     //Creación de variables
+    [Key]
     [StringLength(30)]
     public string IdTipoMaterial {get;set;}
 
