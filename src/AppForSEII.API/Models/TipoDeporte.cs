@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace AppForSEII.API.Models;
 
-public class TipoDeporte : IdentityUser
+public class TipoDeporte
 {
     public TipoDeporte()
     {
