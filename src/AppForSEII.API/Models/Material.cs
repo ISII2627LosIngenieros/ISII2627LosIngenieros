@@ -31,11 +31,12 @@ public class Material
     public ICollection<MaterialAlquilado> HistorialAlquileres { get; set; } = new List<MaterialAlquilado>();
 
     // Claves foráneas (Foreign Keys) explícitas para EF Core
-        public string? IdTipoMaterial { get; set; } 
-        public TipoMaterial? TipoMaterial { get; set; }
+    public TipoMaterial TipoMaterial { get; set; }
+    public string IdTipoMaterial { get; set; } 
 
-        public string? TipoDeporteId { get; set; } 
-        public TipoDeporte? TipoDeporte { get; set; }
+    public TipoDeporte TipoDeporte { get; set; }
+    public string IdTipoDeporte { get; set; } 
+        
 
     // --- Métodos ---
     public override bool Equals(object? obj) 
