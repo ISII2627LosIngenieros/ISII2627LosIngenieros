@@ -14,7 +14,7 @@ public enum MetodoPago
 }
 public class Inscripcion
 {
-    public IList<ClaseInscrita> ClasesInscritas { get; set; }  //Foreign key de la relación con la clase ClaseInscrita
+    //public IList<ClaseInscrita> ClasesInscritas { get; set; }  //Foreign key de la relación con la clase ClaseInscrita
     [Required]
     public ApplicationUser Cliente { get; set; }
     [Required(ErrorMessage = "Los datos de pago son obligatorios.")]
@@ -29,7 +29,7 @@ public class Inscripcion
 
     public Inscripcion()
     {
-        ClasesInscritas = new List<ClaseInscrita>();
+        //ClasesInscritas = new List<ClaseInscrita>();
     }
 }
 
