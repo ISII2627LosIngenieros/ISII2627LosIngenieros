@@ -22,4 +22,7 @@ public class ApplicationUser : IdentityUser
 
     [StringLength(50)]
     public string? Surname {get;set;}
+    public Int32 Age {get;set;}
+    public String DNI {get;set;}
+    public String Sex {get;set;}
 }
