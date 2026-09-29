@@ -33,6 +33,7 @@ public class MaterialAlquilado
     [StringLength(50)]
     public string? Descripcion {get;set;}
 
+    [Column(TypeName = "decimal(20,2)")]
     public decimal PrecioMaterialAlquilado {get;set;}
 
     // Propiedad de Relación
