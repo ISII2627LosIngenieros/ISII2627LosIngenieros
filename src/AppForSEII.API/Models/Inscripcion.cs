@@ -17,13 +17,20 @@ public class Inscripcion
     //public IList<ClaseInscrita> ClasesInscritas { get; set; }  //Foreign key de la relación con la clase ClaseInscrita
     [Required]
     public ApplicationUser Cliente { get; set; }
+    
     [Required(ErrorMessage = "Los datos de pago son obligatorios.")]
+    [StringLength(100)]
     public String DatosPago { get; set; }
+
     [Required]
     public DateTime FechaInscripcion { get; set; }
+    
+    [Key]  //Añado la anotación por si acaso
     public Int32 Id { get; set; }   //Primary key de la tabla Inscripcion
+
     [Required(ErrorMessage = "El método de pago es obligatorio.")]
     public MetodoPago MetodoPago { get; set; }
+
     [Required]
     public Decimal PrecioTotal { get; set; }
 
