@@ -30,7 +30,7 @@ public class TipoDeporte
     public string Pistas {get;set;}
 
     // Relación 1 a N
-    public IList<Material> Materiales { get; set; }
+    //public IList<Material> Materiales { get; set; }
 
     // --- Métodos ---
     public override bool Equals(object? obj) 
