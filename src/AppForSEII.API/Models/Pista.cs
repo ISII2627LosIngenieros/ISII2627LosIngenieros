@@ -4,7 +4,7 @@ public class Pista
     [System.ComponentModel.DataAnnotations.Key]
     public int IdPista { get; set; }
 
-    public string NombrePista { get; set; }
+    public string NombrePista { get; set; } 
 
     public int NPersonas { get; set; }
 
@@ -15,8 +15,8 @@ public class Pista
 
     public int IdTipoDeporte { get; set; }
 
-    public TipoDeporte TipoDeporte { get; set; }
+   //public TipoDeporte TipoDeporte { get; set; }
 
 
-    public ICollection<PistaReservada> PistasReservadas { get; set; } = new List<PistaReservada>();
+   // public ICollection<PistaReservada> PistasReservadas { get; set; } = new List<PistaReservada>();
 }
