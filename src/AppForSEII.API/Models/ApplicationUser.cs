@@ -17,12 +17,24 @@ public class ApplicationUser : IdentityUser
         Email = userName;
     }
 
-    [StringLength(50)]
-    public string? Name {get;set;}
+    [Required]
+    public Int32 Age { get; set; }
 
+    [Required] 
+    [StringLength(9)]
+    public String DNI { get; set; }
+
+    [Required] 
+    [StringLength(100)]
+    public String Name { get; set; }
+
+    [Required] 
+    [StringLength(9)]
+    public String Sex { get; set; }
+
+    [Required]
     [StringLength(50)]
-    public string? Surname {get;set;}
-    public Int32 Age {get;set;}
-    public String DNI {get;set;}
-    public String Sex {get;set;}
+    public String Surname { get; set; }
+
+    //Email, PhoneNumber y UserName ya vienen de IdentityUser, no hhay que añadirlos aquí
 }
