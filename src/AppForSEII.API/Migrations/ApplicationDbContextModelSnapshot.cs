@@ -95,6 +95,37 @@ namespace AppForSEII.API.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("AppForSEII.API.Models.MaterialAlquilado", b =>
+                {
+                    b.Property<string>("IdMaterialAlquilado")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("IdAlquiler")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("IdMaterial")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<decimal>("PrecioMaterialAlquilado")
+                        .HasColumnType("decimal(20,2)");
+
+                    b.HasKey("IdMaterialAlquilado");
+
+                    b.ToTable("MaterialAlquilados");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")

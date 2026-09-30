@@ -53,6 +53,22 @@ namespace AppForSEII.API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "MaterialAlquilados",
+                columns: table => new
+                {
+                    IdMaterialAlquilado = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Cantidad = table.Column<int>(type: "int", nullable: false),
+                    IdMaterial = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    IdAlquiler = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    PrecioMaterialAlquilado = table.Column<decimal>(type: "decimal(20,2)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MaterialAlquilados", x => x.IdMaterialAlquilado);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -215,6 +231,9 @@ namespace AppForSEII.API.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "MaterialAlquilados");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

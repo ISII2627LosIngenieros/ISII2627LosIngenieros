@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppForSEII.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260908144451_CreateIdentitySchema")]
+    [Migration("20260929112731_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
         /// <inheritdoc />
@@ -96,6 +96,37 @@ namespace AppForSEII.API.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("AppForSEII.API.Models.MaterialAlquilado", b =>
+                {
+                    b.Property<string>("IdMaterialAlquilado")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("IdAlquiler")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("IdMaterial")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<decimal>("PrecioMaterialAlquilado")
+                        .HasColumnType("decimal(20,2)");
+
+                    b.HasKey("IdMaterialAlquilado");
+
+                    b.ToTable("MaterialAlquilados");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
