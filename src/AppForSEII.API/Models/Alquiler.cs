@@ -4,7 +4,10 @@ namespace AppForSEII.API.Models;
 public class Alquiler
 {
     //Constructorees
-   
+   public Alquiler()
+    {
+    }
+
     public Alquiler(string apellidosusuario, string dni, DateTime fechaalquiler, string idalquiler, string materialalquilado, string metodopago, string nombreusuario, string numerotelefono, decimal preciototal)
     {
         ApellidosUsuario = apellidosusuario;
@@ -43,11 +46,12 @@ public class Alquiler
     [StringLength(20)]
     public string? NumeroTelefono {get;set;}
 
+    [Column(TypeName = "decimal(20,2)")]
     public decimal PrecioTotal {get;set;}
 
     //Metodos que puede realizar la clase
     // Relación 1 a N con Material
-    public IList<MaterialAlquilado> MaterialesAlquilados { get; set; }
+    //public IList<MaterialAlquilado> MaterialesAlquilados { get; set; }
 
     // Comparación basada en el ID del Alquiler
     public override bool Equals(object? obj) 

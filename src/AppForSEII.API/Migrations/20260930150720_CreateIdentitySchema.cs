@@ -12,6 +12,25 @@ namespace AppForSEII.API.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Alquiler",
+                columns: table => new
+                {
+                    IdAlquiler = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    ApellidosUsuario = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    DNI = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    FechaAlquiler = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    MaterialAlquilado = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    MetodoPago = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    NombreUsuario = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    NumeroTelefono = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
+                    PrecioTotal = table.Column<decimal>(type: "decimal(20,2)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Alquiler", x => x.IdAlquiler);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -201,6 +220,9 @@ namespace AppForSEII.API.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Alquiler");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
