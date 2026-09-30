@@ -53,6 +53,18 @@ namespace AppForSEII.API.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "TiposMaterial",
+                columns: table => new
+                {
+                    IdTipoMaterial = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    NameTipoMaterial = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TiposMaterial", x => x.IdTipoMaterial);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -215,6 +227,9 @@ namespace AppForSEII.API.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "TiposMaterial");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
