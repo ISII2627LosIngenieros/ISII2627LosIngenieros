@@ -9,10 +9,12 @@ public class TipoMaterial
     public TipoMaterial()
     {
     }
-    public TipoMaterial(string idtipomaterial, string nametipomaterial)
+
+    public TipoMaterial(string idtipomaterial, string nametipomaterial, IList<Material> materiales)
     {
         IdTipoMaterial = idtipomaterial;
         NameTipoMaterial = nametipomaterial;
+        Materiales = materiales;
     }
 
     //Creación de variables
@@ -20,8 +22,9 @@ public class TipoMaterial
     [StringLength(30)]
     public string IdTipoMaterial {get;set;}
 
+    [Required]
     [StringLength(50)]
-    public string? NameTipoMaterial {get;set;}
+    public string NameTipoMaterial {get;set;}
 
     //Metodos que puede realizar la clase
     // Relación 1 a N con Material
