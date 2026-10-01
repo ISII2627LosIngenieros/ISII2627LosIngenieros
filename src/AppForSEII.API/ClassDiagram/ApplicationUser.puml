@@ -9,4 +9,8 @@ ApplicationUser --> "DNI" String
 ApplicationUser --> "Name" String
 ApplicationUser --> "Sex" String
 ApplicationUser --> "Surname" String
+    + Name : string? <<get>> <<set>>
+    + Surname : string? <<get>> <<set>>
+}
+IdentityUser <|-- ApplicationUser
 @enduml

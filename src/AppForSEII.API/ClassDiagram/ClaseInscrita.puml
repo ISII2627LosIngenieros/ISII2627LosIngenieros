@@ -1,0 +1,11 @@
+@startuml
+class ClaseInscrita {
+    + ClaseInscrita()
+}
+ClaseInscrita --> "ClaseDeportivaId" Int32
+ClaseInscrita --> "Id" Int32
+ClaseInscrita --> "InscripcionId" Int32
+ClaseInscrita --> "Observaciones" String
+ClaseInscrita --> "PlazasReservadas" Int32
+ClaseInscrita --> "Precio" Decimal
+@enduml
