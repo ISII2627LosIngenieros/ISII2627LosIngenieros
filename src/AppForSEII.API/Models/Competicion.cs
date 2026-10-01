@@ -20,21 +20,22 @@ public class Competicion
     [Key]
     public int Id { get; set; }
 
-    // Fecha, Lugar y Nombre se han definido como string vacío en caso de que no se pase ninguno por el constructor
     [Required]
     [StringLength(50)]
-    public string Fecha {get;set;} = string.Empty;
+    public string Fecha {get;set;}
 
     [Required]
     [StringLength(50)]
-    public string Lugar {get;set;} = string.Empty;
+    public string Lugar {get;set;}
 
     [Required]
     [StringLength(50)]
-    public string Nombre {get;set;} = string.Empty;
+    public string Nombre {get;set;}
     
+    [Required]
     public int Plazas {get;set;}
 
+    [Required]
     public decimal Precio {get;set;}
 
     // Métodos adicionales
