@@ -12,6 +12,9 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
 
         base.OnModelCreating(builder);
 
+        builder.Entity<Competicion>()
+            .Property(competicion => competicion.Precio)
+            .HasPrecision(18, 2);
 
     }
 
@@ -25,6 +28,5 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Inscripcion> Inscripciones { get; set; }
     public DbSet<ClaseInscrita> ClasesInscritas { get; set; }
     public DbSet<PistaReservada> PistasReservadas { get; set; }
+    public DbSet<Competicion> Competicion { get; set; }
 }
-
-
