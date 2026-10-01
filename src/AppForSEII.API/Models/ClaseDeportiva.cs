@@ -10,7 +10,7 @@ public class ClaseDeportiva
     public DateTime FechaHora { get; set; }
 
     [Key]  //Añado la anotación [Key] por si acaso
-    public int Id { get; set; }  //Primary key de la tabla ClaseDeportiva
+    public Int32 Id { get; set; }  //Primary key de la tabla ClaseDeportiva
 
     [StringLength(100)]
     public String? Lugar { get; set; }
