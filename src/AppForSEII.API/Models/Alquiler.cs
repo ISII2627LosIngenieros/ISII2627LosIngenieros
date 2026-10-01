@@ -8,13 +8,12 @@ public class Alquiler
     {
     }
 
-    public Alquiler(string apellidosusuario, string dni, DateTime fechaalquiler, string idalquiler, string materialalquilado, string metodopago, string nombreusuario, string numerotelefono, decimal preciototal)
+    public Alquiler(string apellidosusuario, string dni, DateTime fechaalquiler, string idalquiler, string metodopago, string nombreusuario, string numerotelefono, decimal preciototal)
     {
         ApellidosUsuario = apellidosusuario;
         DNI = dni;
         FechaAlquiler = fechaalquiler;
         IdAlquiler = idalquiler;
-        MaterialAlquilado = materialalquilado;
         MetodoPago = metodopago;
         NombreUsuario = nombreusuario;
         NumeroTelefono = numerotelefono;
@@ -22,30 +21,34 @@ public class Alquiler
     }
 
     //Creación de variables
+    [Required]
     [StringLength(50)]
     public string ApellidosUsuario { get; set; }
 
+    [Required]
     [StringLength(50)]
     public string DNI { get; set; }
 
+    [Required]
     public DateTime FechaAlquiler {get;set;}
 
-    [Required]
+    [Key]
     [StringLength(50)]
     public string IdAlquiler { get; set; }
 
-    [StringLength(50)]
-    public string MaterialAlquilado { get; set; }
-
+    [Required]
     [StringLength(50)]
     public string MetodoPago { get; set; }
 
+    [Required]
     [StringLength(50)]
     public string NombreUsuario { get; set; }
 
+    [Required]
     [StringLength(20)]
-    public string? NumeroTelefono {get;set;}
+    public string NumeroTelefono {get;set;}
 
+    [Required]
     [Column(TypeName = "decimal(20,2)")]
     public decimal PrecioTotal {get;set;}
 
