@@ -37,8 +37,8 @@ public class MaterialAlquilado
     public decimal PrecioMaterialAlquilado {get;set;}
 
     // Propiedad de Relación
-    //public Alquiler? Alquiler {get;set;}
-    //public Material? Material {get;set;}
+    public Alquiler? Alquiler {get;set;}
+    public Material? Material {get;set;}
 
      // --- Métodos ---
     public override bool Equals(object? obj) 
