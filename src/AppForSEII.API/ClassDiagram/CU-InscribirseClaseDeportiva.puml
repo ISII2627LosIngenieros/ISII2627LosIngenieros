@@ -1,4 +1,4 @@
 @startuml
 hide methods
-!include include.puml
+!include ClaseInscrita.puml
 @enduml
