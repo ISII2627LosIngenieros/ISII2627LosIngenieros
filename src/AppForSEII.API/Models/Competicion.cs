@@ -21,12 +21,15 @@ public class Competicion
     public int Id { get; set; }
 
     // Fecha, Lugar y Nombre se han definido como string vacío en caso de que no se pase ninguno por el constructor
+    [Required]
     [StringLength(50)]
     public string Fecha {get;set;} = string.Empty;
 
+    [Required]
     [StringLength(50)]
     public string Lugar {get;set;} = string.Empty;
 
+    [Required]
     [StringLength(50)]
     public string Nombre {get;set;} = string.Empty;
     
