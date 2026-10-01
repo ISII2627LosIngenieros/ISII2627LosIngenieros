@@ -1,6 +1,6 @@
 public class ClaseDeportiva
 {
-    //public IList<ClaseInscrita> ClasesInscritas { get; set; }  //Relación con la clase ClaseInscrita
+    public IList<ClaseInscrita> ClasesInscritas { get; set; }  //Relación con la clase ClaseInscrita
 
     [Required]
     [StringLength(200)]
@@ -29,13 +29,13 @@ public class ClaseDeportiva
     [Required]
     public Decimal PrecioUnitario { get; set; }
 
-    //public TipoDeporte tipoDeporte { get; set; }  //Relación con la clase TipoDeporte
+    public TipoDeporte tipoDeporte { get; set; }  //Relación con la clase TipoDeporte
 
     [ForeignKey("TipoDeporte")]
     public Int32 TipoDeporteId { get; set; }  //Foreign key de la relación con la clase TipoDeporte
 
     public ClaseDeportiva()  //Constructor para inicializar una lista vacía de ClasesInscritas
     {
-        //ClasesInscritas = new List<ClaseInscrita>();
+        ClasesInscritas = new List<ClaseInscrita>();
     }
 }
