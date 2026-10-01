@@ -23,15 +23,15 @@ public class Material
     public string IdMaterial {get;set;}
 
     [StringLength(50)]
-    public string? NombreMaterial {get;set;}
+    public string NombreMaterial {get;set;}
 
     [Column(TypeName = "decimal(20,2)")]
     public decimal PrecioMaterial {get;set;}
 
     // Relación 1 a N
-    public ICollection<MaterialAlquilado> HistorialAlquileres { get; set; } = new List<MaterialAlquilado>();
+    public IList<MaterialAlquilado> MaterialesAlquileres { get; set; } = new List<MaterialAlquilado>();
 
-    // Claves foráneas (Foreign Keys) explícitas para EF Core
+    // Claves foráneas (Foreign Keys)
     public TipoMaterial TipoMaterial { get; set; }
     public string IdTipoMaterial { get; set; } 
 
