@@ -51,7 +51,7 @@ public class Alquiler
 
     //Metodos que puede realizar la clase
     // Relación 1 a N con Material
-    //public IList<MaterialAlquilado> MaterialesAlquilados { get; set; }
+    public IList<MaterialAlquilado> MaterialesAlquilados { get; set; }
 
     // Comparación basada en el ID del Alquiler
     public override bool Equals(object? obj) 
