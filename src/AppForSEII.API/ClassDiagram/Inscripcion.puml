@@ -1,0 +1,18 @@
+@startuml
+enum MetodoPago {
+    Bizum,
+    Efectivo,
+    Tarjeta,
+    Transferencia,
+    Metalico,
+}
+class Inscripcion {
+    + Inscripcion()
+}
+Inscripcion --> "Cliente" ApplicationUser
+Inscripcion --> "DatosPago" String
+Inscripcion --> "FechaInscripcion" DateTime
+Inscripcion --> "Id" Int32
+Inscripcion --> "MetodoPago" MetodoPago
+Inscripcion --> "PrecioTotal" Decimal
+@enduml
