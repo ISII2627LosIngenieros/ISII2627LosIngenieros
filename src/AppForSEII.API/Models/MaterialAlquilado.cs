@@ -18,15 +18,18 @@ public class MaterialAlquilado
         PrecioMaterialAlquilado = precioMaterialAlquilado;
     }
 
+    [Required]
     public int Cantidad {get;set;}
 
     [Key]
     [StringLength(50)]
     public string IdMaterialAlquilado {get;set;}
 
+    [ForeignKey("Material")]
     [StringLength(50)]
     public string IdMaterial {get;set;}
 
+    [ForeignKey("Alquiler")]
     [StringLength(50)]
     public string IdAlquiler {get;set;}
 
@@ -37,8 +40,11 @@ public class MaterialAlquilado
     public decimal PrecioMaterialAlquilado {get;set;}
 
     // Propiedad de Relación
-    public Alquiler? Alquiler {get;set;}
-    public Material? Material {get;set;}
+    [Required]
+    public Alquiler Alquiler {get;set;}
+
+    [Required]
+    public Material Material {get;set;}
 
      // --- Métodos ---
     public override bool Equals(object? obj) 
