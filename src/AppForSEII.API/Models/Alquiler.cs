@@ -30,7 +30,7 @@ public class Alquiler
 
     public DateTime FechaAlquiler {get;set;}
 
-    [Key]
+    [Required]
     [StringLength(50)]
     public string IdAlquiler { get; set; }
 
