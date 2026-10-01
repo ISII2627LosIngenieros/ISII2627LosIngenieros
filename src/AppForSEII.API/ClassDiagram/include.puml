@@ -1,4 +1,6 @@
 @startuml
 !include .\\ApplicationUser.puml
 !include .\\Inscripcion.puml
+!include .\\ClaseInscrita.puml
+!include .\\PistaReservada.puml
 @enduml
