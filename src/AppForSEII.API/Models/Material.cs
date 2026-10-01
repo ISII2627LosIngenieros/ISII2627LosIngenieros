@@ -33,9 +33,11 @@ public class Material
 
     // Claves foráneas (Foreign Keys)
     public TipoMaterial TipoMaterial { get; set; }
+    [ForeignKey("IdTipoMaterial")]
     public string IdTipoMaterial { get; set; } 
 
     public TipoDeporte TipoDeporte { get; set; }
+    [ForeignKey("IdTipoDeporte")]
     public string IdTipoDeporte { get; set; }
         
 
