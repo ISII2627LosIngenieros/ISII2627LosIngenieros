@@ -1,4 +1,8 @@
 @startuml
 !include .\\Alquiler.puml
 !include .\\ApplicationUser.puml
+!include .\\ClaseDeportiva.puml
+!include .\\Inscripcion.puml
+!include .\\ClaseInscrita.puml
+!include .\\PistaReservada.puml
 @enduml
