@@ -33,8 +33,9 @@ public class MaterialAlquilado
     [StringLength(50)]
     public string IdAlquiler {get;set;}
 
+    [Required]
     [StringLength(50)]
-    public string? Descripcion {get;set;}
+    public string Descripcion {get;set;}
 
     [Column(TypeName = "decimal(20,2)")]
     public decimal PrecioMaterialAlquilado {get;set;}
