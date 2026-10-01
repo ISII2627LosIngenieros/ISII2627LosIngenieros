@@ -1,5 +1,6 @@
 @startuml
 hide methods
+!include MaterialAlquilado.puml
 !include Material.puml
 !include Alquiler.puml
 @enduml
