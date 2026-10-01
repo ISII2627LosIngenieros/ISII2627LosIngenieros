@@ -1,0 +1,14 @@
+@startuml
+class ClaseDeportiva {
+    + Id : int <<get>> <<set>>
+    + ClaseDeportiva()
+}
+ClaseDeportiva --> "Descripcion" String
+ClaseDeportiva --> "FechaHora" DateTime
+ClaseDeportiva --> "Lugar" String
+ClaseDeportiva --> "Monitor" String
+ClaseDeportiva --> "Nivel" String
+ClaseDeportiva --> "PlazasDisponibles" Int32
+ClaseDeportiva --> "PrecioUnitario" Decimal
+ClaseDeportiva --> "TipoDeporteId" Int32
+@enduml
