@@ -4,6 +4,9 @@ namespace AppForSEII.API.Models;
 
 public class PistaReservada
 {
+    public PistaReservada()
+    {
+    }
 
     [Key]
     public int Id { get; set; }
@@ -23,12 +26,14 @@ public class PistaReservada
 
     public int IdPista { get; set; }
 
-    public Pista Pista { get; set; }
+    //public Pista Pista { get; set; }
 
 
 
     public int IdReserva { get; set; }
 
-    public Reserva Reserva { get; set; }
+    //public Reserva Reserva { get; set; }
+
+    
 
 }
