@@ -1,0 +1,12 @@
+@startuml
+class TipoDeporte {
+    + TipoDeporte()
+    + TipoDeporte(id:string, nombre:string, competicion:string, pistas:string)
+    + Competiciones : string <<get>> <<set>>
+    + Id : string <<get>> <<set>>
+    + Nombre : string <<get>> <<set>>
+    + Pistas : string <<get>> <<set>>
+    + <<override>> Equals(obj:object?) : bool
+    + <<override>> GetHashCode() : int
+}
+@enduml
