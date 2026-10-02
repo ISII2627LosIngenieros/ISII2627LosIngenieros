@@ -16,6 +16,13 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
             .Property(competicion => competicion.Precio)
             .HasPrecision(18, 2);
 
+        builder.Entity<CompeticionInscripcion>()
+            .HasKey(competicionInscripcion => new
+            {
+                competicionInscripcion.CompeticionId,
+                competicionInscripcion.InscripcionId
+            });
+
     }
 
     public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -31,4 +38,5 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<ClaseInscrita> ClasesInscritas { get; set; }
     public DbSet<PistaReservada> PistasReservadas { get; set; }
     public DbSet<Competicion> Competicion { get; set; }    
+    public DbSet<CompeticionInscripcion> CompeticionInscripciones { get; set; }
 }
