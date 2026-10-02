@@ -1,6 +1,5 @@
 @startuml
 class Reserva {
-    + Reserva()
     + Id : int <<get>> <<set>>
     + NombreCliente : string <<get>> <<set>>
     + Apellidos : string <<get>> <<set>>

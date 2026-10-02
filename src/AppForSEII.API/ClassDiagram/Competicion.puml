@@ -8,5 +8,8 @@ class Competicion {
     + Nombre : string <<get>> <<set>>
     + Plazas : int <<get>> <<set>>
     + Precio : decimal <<get>> <<set>>
+    + CompeticionInscripciones : IList<CompeticionInscripcion> <<get>> <<set>>
+    + TipoDeporteId : int <<get>> <<set>>
+    + TipoDeporte : TipoDeporte <<get>> <<set>>
 }
 @enduml

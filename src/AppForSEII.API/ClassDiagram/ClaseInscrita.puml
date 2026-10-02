@@ -1,11 +1,13 @@
 @startuml
 class ClaseInscrita {
+    + ClaseDeportiva : ClaseDeportiva <<get>> <<set>>
+    + ClaseDeportivaId : Int32 <<get>> <<set>>
+    + Id : Int32 <<get>> <<set>>
+    + Inscripcion : Inscripcion <<get>> <<set>>
+    + InscripcionId : Int32 <<get>> <<set>>
+    + Observaciones : String? <<get>> <<set>>
+    + PlazasReservadas : Int32 <<get>> <<set>>
+    + Precio : Decimal <<get>> <<set>>
     + ClaseInscrita()
 }
-ClaseInscrita --> "ClaseDeportivaId" Int32
-ClaseInscrita --> "Id" Int32
-ClaseInscrita --> "InscripcionId" Int32
-ClaseInscrita --> "Observaciones" String
-ClaseInscrita --> "PlazasReservadas" Int32
-ClaseInscrita --> "Precio" Decimal
 @enduml

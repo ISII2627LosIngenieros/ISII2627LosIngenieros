@@ -1,11 +1,17 @@
 @startuml
 class TipoDeporte {
     + TipoDeporte()
-    + TipoDeporte(id:string, nombre:string, competicion:string, pistas:string)
-    + Competiciones : string <<get>> <<set>>
-    + Id : string <<get>> <<set>>
+    + TipoDeporte(id:Int32, nombre:string, competicion:string, pistas:string, materiales:string, nombretipodeporte:string, descripcion:string?)
+    + Competicion : string <<get>> <<set>>
+    + Id : Int32 <<get>> <<set>>
     + Nombre : string <<get>> <<set>>
     + Pistas : string <<get>> <<set>>
+    + Materiales : string <<get>> <<set>>
+    + NombreTipoDeporte : string <<get>> <<set>>
+    + Descripcion : string <<get>> <<set>>
+    + ListaMateriales : IList<Material> <<get>> <<set>>
+    + Competiciones : IList<Competicion> <<get>> <<set>>
+    + ClasesDeportivas : IList<ClaseDeportiva> <<get>> <<set>>
     + <<override>> Equals(obj:object?) : bool
     + <<override>> GetHashCode() : int
 }

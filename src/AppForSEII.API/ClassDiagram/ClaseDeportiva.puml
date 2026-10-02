@@ -1,14 +1,16 @@
 @startuml
 class ClaseDeportiva {
-    + Id : int <<get>> <<set>>
+    + ClasesInscritas : IList<ClaseInscrita> <<get>> <<set>>
+    + Descripcion : String <<get>> <<set>>
+    + FechaHora : DateTime <<get>> <<set>>
+    + Id : Int32 <<get>> <<set>>
+    + Lugar : String? <<get>> <<set>>
+    + Monitor : String <<get>> <<set>>
+    + Nivel : String <<get>> <<set>>
+    + PlazasDisponibles : Int32 <<get>> <<set>>
+    + PrecioUnitario : Decimal <<get>> <<set>>
+    + tipoDeporte : TipoDeporte <<get>> <<set>>
+    + TipoDeporteId : Int32 <<get>> <<set>>
     + ClaseDeportiva()
 }
-ClaseDeportiva --> "Descripcion" String
-ClaseDeportiva --> "FechaHora" DateTime
-ClaseDeportiva --> "Lugar" String
-ClaseDeportiva --> "Monitor" String
-ClaseDeportiva --> "Nivel" String
-ClaseDeportiva --> "PlazasDisponibles" Int32
-ClaseDeportiva --> "PrecioUnitario" Decimal
-ClaseDeportiva --> "TipoDeporteId" Int32
 @enduml

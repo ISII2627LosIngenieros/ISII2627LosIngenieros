@@ -7,12 +7,14 @@ enum MetodoPago {
     Metalico,
 }
 class Inscripcion {
+    + ClasesInscritas : IList<ClaseInscrita> <<get>> <<set>>
+    + CompeticionInscripciones : IList<CompeticionInscripcion> <<get>> <<set>>
+    + Cliente : ApplicationUser <<get>> <<set>>
+    + DatosPago : String <<get>> <<set>>
+    + FechaInscripcion : DateTime <<get>> <<set>>
+    + Id : Int32 <<get>> <<set>>
+    + MetodoPago : MetodoPago <<get>> <<set>>
+    + PrecioTotal : Decimal <<get>> <<set>>
     + Inscripcion()
 }
-Inscripcion --> "Cliente" ApplicationUser
-Inscripcion --> "DatosPago" String
-Inscripcion --> "FechaInscripcion" DateTime
-Inscripcion --> "Id" Int32
-Inscripcion --> "MetodoPago" MetodoPago
-Inscripcion --> "PrecioTotal" Decimal
 @enduml

@@ -1,0 +1,11 @@
+@startuml
+class CompeticionInscripcion {
+    + CompeticionInscripcion()
+    + CompeticionInscripcion(competicionId:int, inscripcionId:int, problemasFisicos:string)
+    + Competicion : Competicion <<get>> <<set>>
+    + CompeticionId : int <<get>> <<set>>
+    + Inscripcion : Inscripcion <<get>> <<set>>
+    + InscripcionId : int <<get>> <<set>>
+    + ProblemasFisicos : string? <<get>> <<set>>
+}
+@enduml

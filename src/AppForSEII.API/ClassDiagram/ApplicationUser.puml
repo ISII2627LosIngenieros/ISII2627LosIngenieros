@@ -2,15 +2,11 @@
 class ApplicationUser {
     + ApplicationUser()
     + ApplicationUser(id:string, name:string, surname:string, userName:string)
-}
-IdentityUser <|-- ApplicationUser
-ApplicationUser --> "Age" Int32
-ApplicationUser --> "DNI" String
-ApplicationUser --> "Name" String
-ApplicationUser --> "Sex" String
-ApplicationUser --> "Surname" String
-    + Name : string? <<get>> <<set>>
-    + Surname : string? <<get>> <<set>>
+    + Age : Int32 <<get>> <<set>>
+    + DNI : String <<get>> <<set>>
+    + Name : String <<get>> <<set>>
+    + Sex : String <<get>> <<set>>
+    + Surname : String <<get>> <<set>>
 }
 IdentityUser <|-- ApplicationUser
 @enduml
