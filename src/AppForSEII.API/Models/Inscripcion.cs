@@ -36,8 +36,28 @@ public class Inscripcion
 
     public Inscripcion()
     {
-        //ClasesInscritas = new List<ClaseInscrita>();
+        ClasesInscritas = new List<ClaseInscrita>();
+        CompeticionInscripciones = new List<CompeticionInscripcion>();
     }
-}
 
+    [Required(ErrorMessage = "Es obligatorio introducir el apellido del usuario.")]
+    [StringLength(50)]
+    public String ApellidosUsuario {get; set;}
+
+    [Required(ErrorMessage = "El DNI es obligatorio.")]
+    [StringLength(10)]
+    public String DNI {get; set;}
+
+    [Required(ErrorMessage = "Es obligatorio introducir el nombre del usuario.")]
+    [StringLength(50)]
+    public String NombreUsuario {get; set;}
+
+    [Required(ErrorMessage = "Es obligatorio introducir el teléfono del usuario.")]
+    [StringLength(20)]
+    public String Telefono {get; set;}
+
+    // Relación con la clase intermedia CompeticionInscripcion
+    public IList<CompeticionInscripcion> CompeticionInscripciones { get; set; }
+
+}
 
