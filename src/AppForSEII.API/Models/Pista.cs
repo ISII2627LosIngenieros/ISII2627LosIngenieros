@@ -30,4 +30,15 @@ public class Pista
     public TipoDeporte TipoDeporte { get; set; }
 
     public IList<PistaReservada> PistasReservadas { get; set; }
+
+    //Constructor
+    public Pista(int idPista, string nombrePista, int nPersonas, decimal precio, int stock, int idTipoDeporte)
+    {
+        IdPista = idPista;
+        NombrePista = nombrePista;
+        NPersonas = nPersonas;
+        Precio = precio;
+        Stock = stock;
+        IdTipoDeporte = idTipoDeporte;
+    }
 }

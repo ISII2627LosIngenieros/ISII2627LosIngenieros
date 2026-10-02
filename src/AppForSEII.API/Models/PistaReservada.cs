@@ -25,4 +25,15 @@ public class PistaReservada
     public int IdReserva { get; set; }
 
     public Reserva Reserva { get; set; }
+
+    //Constructor
+    public PistaReservada(int id, int cantidad, decimal precio, string observaciones, int idPista, int idReserva)
+    {
+        Id = id;
+        Cantidad = cantidad;
+        Precio = precio;
+        Observaciones = observaciones;
+        IdPista = idPista;
+        IdReserva = idReserva;
+    }
 }

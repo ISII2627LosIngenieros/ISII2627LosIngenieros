@@ -59,5 +59,28 @@ public class Inscripcion
     // Relación con la clase intermedia CompeticionInscripcion
     public IList<CompeticionInscripcion> CompeticionInscripciones { get; set; }
 
+    //Constructores de los dos casos de uso
+    //Caso de uso 4: Inscripción a una clase deportiva
+    public Inscripcion(ClaseInscrita claseInscrita, ApplicationUser cliente, string datosPago, DateTime fechaInscripcion, int id, MetodoPago metodoPago, decimal precioTotal)
+    {
+        ClasesInscritas = new List<ClaseInscrita> { claseInscrita };
+        Cliente = cliente;
+        DatosPago = datosPago;
+        FechaInscripcion = fechaInscripcion;
+        Id = id;
+        MetodoPago = metodoPago;
+        PrecioTotal = precioTotal;
+    }
+
+    //Caso de uso 3: Inscribirse a una competición
+    public Inscripcion(ApplicationUser cliente, string fechaInscripcion, int id, MetodoPago metodoPago, decimal precioTotal)
+    {
+        ClasesInscritas = new List<ClaseInscrita>();
+        Cliente = cliente;
+        FechaInscripcion = DateTime.Parse(fechaInscripcion);
+        Id = id;
+        MetodoPago = metodoPago;
+        PrecioTotal = precioTotal;
+    }
 }
 
