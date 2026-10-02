@@ -38,6 +38,13 @@ public class Competicion
     [Required]
     public decimal Precio {get;set;}
 
+    public IList<CompeticionInscripcion> CompeticionInscripciones { get; set; } = new List<CompeticionInscripcion>();
+
+    [ForeignKey(nameof(TipoDeporte))]
+    public int TipoDeporteId { get; set; }
+
+    public TipoDeporte TipoDeporte { get; set; } = null!;
+
     // Métodos adicionales
 
 }

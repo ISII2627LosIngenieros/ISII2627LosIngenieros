@@ -15,6 +15,8 @@ public enum MetodoPago
 public class Inscripcion
 {
     public IList<ClaseInscrita> ClasesInscritas { get; set; }  //Foreign key de la relación con la clase ClaseInscrita
+
+    public IList<CompeticionInscripcion> CompeticionInscripciones { get; set; } = new List<CompeticionInscripcion>();
     [Required]
     public ApplicationUser Cliente { get; set; }
     

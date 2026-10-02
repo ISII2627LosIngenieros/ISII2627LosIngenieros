@@ -16,8 +16,16 @@ public class CompeticionInscripcion
     }
 
 
+    public Competicion Competicion { get; set; } = null!;   // el objeto Competicion asociado a esta inscripción en la competición
+                                                            // con esto se pueden ver los datos de la competición desde la inscripción
+                                                            // el =null!; es para indicar que no puede ser nulo, ya que es obligatorio tener una competición asociada a la inscripción
+
+    [ForeignKey(nameof(Competicion))]
     public int CompeticionId { get; set; }
 
+    public Inscripcion Inscripcion { get; set; } = null!;   // igual que para la competición
+
+    [ForeignKey(nameof(Inscripcion))]
     public int InscripcionId { get; set; }
 
     [StringLength(100)]
