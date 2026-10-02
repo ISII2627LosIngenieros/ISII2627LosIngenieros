@@ -55,14 +55,10 @@ public class Inscripcion
     [StringLength(20)]
     public String Telefono {get; set;}
 
-
-    /*
-
-    Descomentar cuando esté la clase intermedia CompeticionInscripcion para la relación muchos a muchos entre Inscripcion y Competicion
-
+    // Relación con la clase intermedia CompeticionInscripcion
     public IList<CompeticionInscripcion> CompeticionInscripciones { get; set; }
     = new List<CompeticionInscripcion>();
-    */
+
 }
 
 
