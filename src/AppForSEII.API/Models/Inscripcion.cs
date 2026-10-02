@@ -38,6 +38,21 @@ public class Inscripcion
     {
         //ClasesInscritas = new List<ClaseInscrita>();
     }
+
+    [Required]
+    [StringLength(50)]
+    public String ApellidosUsuario {get; set;}
+
+    [Required]
+    [StringLength(10)]
+    public String DNI {get; set;}
+
+    [Required]
+    [StringLength(50)]
+    public String NombreUsuario {get; set;}
+
+    [Required]
+    public Int32 Telefono {get; set;}
 }
 
 
