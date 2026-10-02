@@ -1,4 +1,4 @@
-namespace AppForMovies.API.Data {
+namespace AppForSEII.API.Data {
     public class SeedData {
         public static void Initialize(ApplicationDbContext dbContext, IServiceProvider serviceProvider, ILogger logger) {
             List<string> rolesNames = new List<string> { "Administrator", "Employee", "Customer" };
