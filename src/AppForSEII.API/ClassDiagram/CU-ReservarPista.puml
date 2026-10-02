@@ -1,5 +1,8 @@
 @startuml
 hide methods
+!include ApplicationUser.puml
+!include TipoDeporte.puml
+!include Pista.puml
 !include Reserva.puml
 !include PistaReservada.puml
 @enduml

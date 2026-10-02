@@ -1,4 +1,6 @@
 @startuml
+!include .\\ApplicationUser.puml
+!include .\\Pista.puml
 !include .\\Alquiler.puml
 !include .\\ApplicationUser.puml
 !include .\\Reserva.puml
@@ -8,7 +10,6 @@
 !include .\\MaterialAlquilado.puml
 !include .\\Material.puml
 !include .\\Alquiler.puml
-!include .\\ApplicationUser.puml
 !include .\\ClaseDeportiva.puml
 !include .\\Inscripcion.puml
 !include .\\ClaseInscrita.puml
