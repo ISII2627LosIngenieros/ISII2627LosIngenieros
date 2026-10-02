@@ -1,5 +1,6 @@
 @startuml
 hide methods
+!include TipoMaterial.puml
 !include TipoDeporte.puml
 !include MaterialAlquilado.puml
 !include Material.puml
