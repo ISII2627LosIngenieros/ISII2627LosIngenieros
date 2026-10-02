@@ -18,4 +18,9 @@ Inscripcion --> "FechaInscripcion" DateTime
 Inscripcion --> "Id" Int32
 Inscripcion --> "MetodoPago" MetodoPago
 Inscripcion --> "PrecioTotal" Decimal
+Inscripcion --> "ApellidosUsuario" String
+Inscripcion --> "DNI" String
+Inscripcion --> "NombreUsuario" String
+Inscripcion --> "Telefono" String
+Inscripcion --> "CompeticionInscripciones<CompeticionInscripcion>" "IList`1"
 @enduml
