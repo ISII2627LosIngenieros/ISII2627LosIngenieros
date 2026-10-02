@@ -52,7 +52,8 @@ public class Inscripcion
     public String NombreUsuario {get; set;}
 
     [Required]
-    public Int32 Telefono {get; set;}
+    [StringLength(50)]
+    public String Telefono {get; set;}
 }
 
 
