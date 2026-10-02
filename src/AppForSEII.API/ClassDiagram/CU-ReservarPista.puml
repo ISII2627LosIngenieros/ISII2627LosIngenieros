@@ -1,4 +1,5 @@
 @startuml
 hide methods
 !include Reserva.puml
+!include PistaReservada.puml
 @enduml

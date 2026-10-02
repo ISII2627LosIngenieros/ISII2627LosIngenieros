@@ -1,0 +1,14 @@
+@startuml
+class MaterialAlquilado {
+    + MaterialAlquilado()
+    + MaterialAlquilado(id:string, descripcion:string, cantidad:int, precioMaterialAlquilado:decimal, idAlquiler:string, idMaterial:string)
+    + Cantidad : int <<get>> <<set>>
+    + IdMaterialAlquilado : string <<get>> <<set>>
+    + IdMaterial : string <<get>> <<set>>
+    + IdAlquiler : string <<get>> <<set>>
+    + Descripcion : string? <<get>> <<set>>
+    + PrecioMaterialAlquilado : decimal <<get>> <<set>>
+    + <<override>> Equals(obj:object?) : bool
+    + <<override>> GetHashCode() : int
+}
+@enduml
