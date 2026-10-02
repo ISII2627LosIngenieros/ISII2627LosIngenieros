@@ -39,20 +39,20 @@ public class Inscripcion
         //ClasesInscritas = new List<ClaseInscrita>();
     }
 
-    [Required]
+    [Required(ErrorMessage = "Es obligatorio introducir el apellido del usuario.")]
     [StringLength(50)]
     public String ApellidosUsuario {get; set;}
 
-    [Required]
+    [Required(ErrorMessage = "El DNI es obligatorio.")]
     [StringLength(10)]
     public String DNI {get; set;}
 
-    [Required]
+    [Required(ErrorMessage = "Es obligatorio introducir el nombre del usuario.")]
     [StringLength(50)]
     public String NombreUsuario {get; set;}
 
-    [Required]
-    [StringLength(50)]
+    [Required(ErrorMessage = "Es obligatorio introducir el teléfono del usuario.")]
+    [StringLength(20)]
     public String Telefono {get; set;}
 }
 
