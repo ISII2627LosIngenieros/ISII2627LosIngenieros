@@ -1,4 +1,5 @@
 @startuml
 hide methods
 !include Competicion.puml
+!include CompeticionInscripcion.puml
 @enduml

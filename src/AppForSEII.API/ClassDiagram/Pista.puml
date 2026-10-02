@@ -1,11 +1,15 @@
 @startuml
 class Pista {
+    + Pista()
     + IdPista : int <<get>> <<set>>
     + NombrePista : string <<get>> <<set>>
     + NPersonas : int <<get>> <<set>>
     + Precio : decimal <<get>> <<set>>
     + Stock : int <<get>> <<set>>
     + IdTipoDeporte : int <<get>> <<set>>
-    + TipoDeporte : TipoDeporte <<get>> <<set>>
 }
+class "IList`1"<T> {
+}
+Pista --> "TipoDeporte" TipoDeporte
+Pista --> "PistasReservadas<PistaReservada>" "IList`1"
 @enduml

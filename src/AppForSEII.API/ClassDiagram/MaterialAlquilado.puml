@@ -6,9 +6,11 @@ class MaterialAlquilado {
     + IdMaterialAlquilado : string <<get>> <<set>>
     + IdMaterial : string <<get>> <<set>>
     + IdAlquiler : string <<get>> <<set>>
-    + Descripcion : string? <<get>> <<set>>
+    + Descripcion : string <<get>> <<set>>
     + PrecioMaterialAlquilado : decimal <<get>> <<set>>
     + <<override>> Equals(obj:object?) : bool
     + <<override>> GetHashCode() : int
 }
+MaterialAlquilado --> "Alquiler" Alquiler
+MaterialAlquilado --> "Material" Material
 @enduml

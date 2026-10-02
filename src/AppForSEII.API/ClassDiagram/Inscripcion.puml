@@ -9,6 +9,9 @@ enum MetodoPago {
 class Inscripcion {
     + Inscripcion()
 }
+class "IList`1"<T> {
+}
+Inscripcion --> "ClasesInscritas<ClaseInscrita>" "IList`1"
 Inscripcion --> "Cliente" ApplicationUser
 Inscripcion --> "DatosPago" String
 Inscripcion --> "FechaInscripcion" DateTime

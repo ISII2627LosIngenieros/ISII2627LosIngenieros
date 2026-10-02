@@ -1,12 +1,20 @@
 @startuml
 class TipoDeporte {
     + TipoDeporte()
-    + TipoDeporte(id:string, nombre:string, competicion:string, pistas:string)
-    + Competiciones : string <<get>> <<set>>
-    + Id : string <<get>> <<set>>
+    + TipoDeporte(id:Int32, nombre:string, competicion:string, pistas:string, materiales:string, nombretipodeporte:string, descripcion:string?)
+    + Competicion : string <<get>> <<set>>
     + Nombre : string <<get>> <<set>>
     + Pistas : string <<get>> <<set>>
+    + Materiales : string <<get>> <<set>>
+    + NombreTipoDeporte : string <<get>> <<set>>
+    + Descripcion : string <<get>> <<set>>
     + <<override>> Equals(obj:object?) : bool
     + <<override>> GetHashCode() : int
 }
+class "IList`1"<T> {
+}
+TipoDeporte --> "Id" Int32
+TipoDeporte --> "ListaMateriales<Material>" "IList`1"
+TipoDeporte --> "Competiciones<Competicion>" "IList`1"
+TipoDeporte --> "ClasesDeportivas<ClaseDeportiva>" "IList`1"
 @enduml

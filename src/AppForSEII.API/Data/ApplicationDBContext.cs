@@ -30,5 +30,6 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Inscripcion> Inscripciones { get; set; }
     public DbSet<ClaseInscrita> ClasesInscritas { get; set; }
     public DbSet<PistaReservada> PistasReservadas { get; set; }
-    public DbSet<Competicion> Competicion { get; set; }    
+    public DbSet<Competicion> Competicion { get; set; }   
+    public DbSet<CompeticionInscripcion> CompeticionInscripciones { get; set; } 
 }
