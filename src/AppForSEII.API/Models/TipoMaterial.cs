@@ -29,6 +29,7 @@ public class TipoMaterial
     //Metodos que puede realizar la clase
     // Relación 1 a N con Material
     public IList<Material> Materiales { get; set; }
+    public string NombreTipoMaterial { get; internal set; }
 
     // Comparación basada en el ID del TipoMaterial
     public override bool Equals(object? obj) 
