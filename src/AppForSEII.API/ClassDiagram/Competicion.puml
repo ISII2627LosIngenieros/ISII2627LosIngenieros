@@ -1,0 +1,12 @@
+@startuml
+class Competicion {
+    + Competicion()
+    + Competicion(id:int, fecha:string, lugar:string, nombre:string, plazas:int, precio:decimal)
+    + Id : int <<get>> <<set>>
+    + Fecha : string <<get>> <<set>>
+    + Lugar : string <<get>> <<set>>
+    + Nombre : string <<get>> <<set>>
+    + Plazas : int <<get>> <<set>>
+    + Precio : decimal <<get>> <<set>>
+}
+@enduml
