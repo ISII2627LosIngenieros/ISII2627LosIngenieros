@@ -1,0 +1,10 @@
+@startuml
+class TipoMaterial {
+    + TipoMaterial()
+    + TipoMaterial(idtipomaterial:string, nametipomaterial:string)
+    + IdTipoMaterial : string <<get>> <<set>>
+    + NameTipoMaterial : string? <<get>> <<set>>
+    + <<override>> Equals(obj:object?) : bool
+    + <<override>> GetHashCode() : int
+}
+@enduml
