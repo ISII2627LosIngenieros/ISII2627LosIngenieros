@@ -6,6 +6,11 @@ namespace AppForSEII.API.Models;
 
 public class Pista
 {
+    public Pista()
+    {
+        PistasReservadas = new List<PistaReservada>();
+    }
+
     [Key]
     public int IdPista { get; set; }
 
@@ -25,5 +30,4 @@ public class Pista
     public TipoDeporte TipoDeporte { get; set; }
 
     public IList<PistaReservada> PistasReservadas { get; set; }
-        = new List<PistaReservada>();
 }
