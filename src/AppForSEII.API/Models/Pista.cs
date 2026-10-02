@@ -23,4 +23,7 @@ public class Pista
     public int IdTipoDeporte { get; set; }
 
     public TipoDeporte TipoDeporte { get; set; }
+
+    public IList<PistaReservada> PistasReservadas { get; set; }
+        = new List<PistaReservada>();
 }
