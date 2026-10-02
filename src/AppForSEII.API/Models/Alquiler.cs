@@ -41,7 +41,6 @@ public class Alquiler
     //Metodos que puede realizar la clase
     // Relación 1 a N con Material
     public IList<MaterialAlquilado> MaterialesAlquilados { get; set; }
-    public string ClienteId { get; internal set; }
 
     // Comparación basada en el ID del Alquiler
     public override bool Equals(object? obj) 
@@ -52,10 +51,5 @@ public class Alquiler
     public override int GetHashCode() 
     { 
         return IdAlquiler.GetHashCode(); 
-    }
-
-    public static implicit operator Alquiler(Alquiler v)
-    {
-        throw new NotImplementedException();
     }
 }

@@ -114,9 +114,9 @@ namespace AppForSEII.API.Data {
             List<TipoMaterial> tiposMaterial = new List<TipoMaterial>();
 
             foreach (string nombreTipo in tiposNombres) {
-                var tipo = dbcontext.TiposMaterial.FirstOrDefault(t => t.NombreTipoMaterial == nombreTipo);
+                var tipo = dbcontext.TiposMaterial.FirstOrDefault(t => t.NameTipoMaterial == nombreTipo);
                 if (tipo == null) {
-                    var nuevoTipo = new TipoMaterial { IdTipoMaterial = nombreTipo.Substring(0, 3).ToUpper(), NombreTipoMaterial = nombreTipo };
+                    var nuevoTipo = new TipoMaterial { IdTipoMaterial = nombreTipo.Substring(0, 3).ToUpper(), NameTipoMaterial = nombreTipo };
                     tiposMaterial.Add(nuevoTipo);
                     dbcontext.TiposMaterial.Add(nuevoTipo);
                 }
@@ -157,7 +157,6 @@ namespace AppForSEII.API.Data {
                 
                 var alquiler = new Alquiler {
                     Cliente = user,
-                    ClienteId = user.Id, 
                     FechaAlquiler = DateTime.Now,
                     MetodoPago = "Tarjeta", //MetodoPago.Tarjeta
                     PrecioTotal = material.PrecioMaterial * 2, 
