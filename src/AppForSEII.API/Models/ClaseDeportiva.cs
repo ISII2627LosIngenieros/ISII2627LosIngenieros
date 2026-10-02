@@ -34,8 +34,22 @@ public class ClaseDeportiva
     [ForeignKey("TipoDeporte")]
     public Int32 TipoDeporteId { get; set; }  //Foreign key de la relación con la clase TipoDeporte
 
+    //Constructores
     public ClaseDeportiva()  //Constructor para inicializar una lista vacía de ClasesInscritas
     {
         ClasesInscritas = new List<ClaseInscrita>();
+    }
+
+    public ClaseDeportiva(string descripcion, DateTime fechaHora, int id, string lugar, string monitor, string nivel, int plazasDisponibles, decimal precioUnitario, TipoDeporte tipoDeporte)
+    {
+        Descripcion = descripcion;
+        FechaHora = fechaHora;
+        Id = id;
+        Lugar = lugar;
+        Monitor = monitor;
+        Nivel = nivel;
+        PlazasDisponibles = plazasDisponibles;
+        PrecioUnitario = precioUnitario;
+        this.tipoDeporte = tipoDeporte;
     }
 }

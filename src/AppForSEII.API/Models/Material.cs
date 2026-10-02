@@ -8,12 +8,14 @@ public class Material
     public Material()
     {
     }
-    public Material(string id, string nombrematerial, int cantidad, decimal preciomaterial)
+    public Material(string id, string nombrematerial, int cantidad, decimal preciomaterial, string idTipoMaterial, string idTipoDeporte)
     {
         IdMaterial = id;
         Cantidad = cantidad;
         NombreMaterial = nombrematerial;
         PrecioMaterial = preciomaterial;
+        IdTipoMaterial = idTipoMaterial;
+        IdTipoDeporte = idTipoDeporte;
     }
 
     public int Cantidad {get;set;}

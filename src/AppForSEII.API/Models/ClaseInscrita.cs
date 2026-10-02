@@ -27,8 +27,21 @@ public class ClaseInscrita
     [Required]
     public Decimal Precio { get; set; }
 
+    //Constructores
     public ClaseInscrita()
     {
         
+    }
+
+    public ClaseInscrita(ClaseDeportiva claseDeportiva, int claseDeportivaId, int id, Inscripcion inscripcion, int inscripcionId, string? observaciones, int plazasReservadas, decimal precio)
+    {
+        ClaseDeportiva = claseDeportiva;
+        ClaseDeportivaId = claseDeportivaId;
+        Id = id;
+        Inscripcion = inscripcion;
+        InscripcionId = inscripcionId;
+        Observaciones = observaciones;
+        PlazasReservadas = plazasReservadas;
+        Precio = precio;
     }
 }
