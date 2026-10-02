@@ -2,8 +2,10 @@
 class ClaseInscrita {
     + ClaseInscrita()
 }
+ClaseInscrita --> "ClaseDeportiva" ClaseDeportiva
 ClaseInscrita --> "ClaseDeportivaId" Int32
 ClaseInscrita --> "Id" Int32
+ClaseInscrita --> "Inscripcion" Inscripcion
 ClaseInscrita --> "InscripcionId" Int32
 ClaseInscrita --> "Observaciones" String
 ClaseInscrita --> "PlazasReservadas" Int32

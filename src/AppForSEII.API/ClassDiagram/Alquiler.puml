@@ -1,17 +1,19 @@
 @startuml
 class Alquiler {
     + Alquiler()
-    + Alquiler(apellidosusuario:string, dni:string, fechaalquiler:DateTime, idalquiler:string, materialalquilado:string, metodopago:string, nombreusuario:string, numerotelefono:string, preciototal:decimal)
+    + Alquiler(apellidosusuario:string, dni:string, fechaalquiler:DateTime, idalquiler:string, metodopago:string, nombreusuario:string, numerotelefono:string, preciototal:decimal)
     + ApellidosUsuario : string <<get>> <<set>>
     + DNI : string <<get>> <<set>>
-    + FechaAlquiler : DateTime <<get>> <<set>>
     + IdAlquiler : string <<get>> <<set>>
-    + MaterialAlquilado : string <<get>> <<set>>
     + MetodoPago : string <<get>> <<set>>
     + NombreUsuario : string <<get>> <<set>>
-    + NumeroTelefono : string? <<get>> <<set>>
+    + NumeroTelefono : string <<get>> <<set>>
     + PrecioTotal : decimal <<get>> <<set>>
     + <<override>> Equals(obj:object?) : bool
     + <<override>> GetHashCode() : int
 }
+class "IList`1"<T> {
+}
+Alquiler --> "FechaAlquiler" DateTime
+Alquiler --> "MaterialesAlquilados<MaterialAlquilado>" "IList`1"
 @enduml

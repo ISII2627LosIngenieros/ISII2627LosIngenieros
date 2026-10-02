@@ -1,6 +1,5 @@
 @startuml
 class PistaReservada {
-    + PistaReservada()
     + Id : int <<get>> <<set>>
     + Cantidad : int <<get>> <<set>>
     + Precio : decimal <<get>> <<set>>
@@ -8,4 +7,6 @@ class PistaReservada {
     + IdPista : int <<get>> <<set>>
     + IdReserva : int <<get>> <<set>>
 }
+PistaReservada --> "Pista" Pista
+PistaReservada --> "Reserva" Reserva
 @enduml

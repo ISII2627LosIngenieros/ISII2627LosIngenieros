@@ -1,10 +1,13 @@
 @startuml
 class TipoMaterial {
     + TipoMaterial()
-    + TipoMaterial(idtipomaterial:string, nametipomaterial:string)
+    + TipoMaterial(idtipomaterial:string, nametipomaterial:string, materiales:IList<Material>)
     + IdTipoMaterial : string <<get>> <<set>>
-    + NameTipoMaterial : string? <<get>> <<set>>
+    + NameTipoMaterial : string <<get>> <<set>>
     + <<override>> Equals(obj:object?) : bool
     + <<override>> GetHashCode() : int
 }
+class "IList`1"<T> {
+}
+TipoMaterial --> "Materiales<Material>" "IList`1"
 @enduml
