@@ -1,0 +1,12 @@
+@startuml
+class Material {
+    + Material()
+    + Material(id:string, nombrematerial:string, cantidad:int, preciomaterial:decimal)
+    + Cantidad : int <<get>> <<set>>
+    + IdMaterial : string <<get>> <<set>>
+    + NombreMaterial : string? <<get>> <<set>>
+    + PrecioMaterial : decimal <<get>> <<set>>
+    + <<override>> Equals(obj:object?) : bool
+    + <<override>> GetHashCode() : int
+}
+@enduml

@@ -1,4 +1,7 @@
 @startuml
 hide methods
 !include ClaseDeportiva.puml
+!include ApplicationUser.puml
+!include ClaseDeportiva.puml
+!include ClaseInscrita.puml
 @enduml
